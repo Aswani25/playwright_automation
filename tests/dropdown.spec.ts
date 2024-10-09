@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 
-test.only('Select values from dropdown', async({page}) => {
+test('Select values from dropdown', async({page}) => {
     await page.goto('https://freelance-learn-automation.vercel.app/signup');
     // Using visible text
     await page.locator('#state').selectOption({label: 'Goa'});
