@@ -17,7 +17,7 @@ test('Select values from dropdown', async({page}) => {
     expect(dropdownValues).toContain('Goa');
 });
 
-test.only('Select values from dropdown 1', async({page}) => {
+test('Select values from dropdown 1', async({page}) => {
     await page.goto('https://freelance-learn-automation.vercel.app/signup');
     let state: any = await page.$('#state');
     await page.locator('#state').selectOption({label: 'Goa'});
