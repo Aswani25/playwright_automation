@@ -19,7 +19,7 @@ test('Demo login Test 2', async({page}) => {
     await page.getByRole('menuitem', { name: 'Logout' }).click();
 });
 
-test.only('Demo login Test 3', async({page}) => {
+test('Demo login Test 3', async({page}) => {
     await page.goto('https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F');
     await page.getByLabel('Email:').click();
     await page.getByLabel('Email:').clear()
