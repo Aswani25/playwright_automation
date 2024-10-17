@@ -9,13 +9,12 @@ test('Demo Login Test 1', async({page}) => {
     await page.locator('#log-in').click();
 });
 
-test('Demo login Test 2', async({page}) => {
+test.only('Demo login Test 2', async({page}) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     await page.getByPlaceholder('Username').fill('Admin');
-    await page.getByPlaceholder('Password').click();
     await page.getByPlaceholder('Password').fill('admin123');
     await page.getByRole('button', { name: 'Login' }).click();
-    await page.getByRole('banner').getByText('manda user').click();
+    await page.locator('.oxd-userdropdown-name').click();
     await page.getByRole('menuitem', { name: 'Logout' }).click();
 });
 
