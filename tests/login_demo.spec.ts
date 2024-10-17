@@ -9,7 +9,7 @@ test('Demo Login Test 1', async({page}) => {
     await page.locator('#log-in').click();
 });
 
-test.only('Demo login Test 2', async({page}) => {
+test('Demo login Test 2', async({page}) => {
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
     await page.getByPlaceholder('Username').fill('Admin');
     await page.getByPlaceholder('Password').fill('admin123');
